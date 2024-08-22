@@ -36,7 +36,7 @@ connectToDB();
 
 // Routes
 app.get('/', (req, res) => {
-    res.json("Hi NodeJs!");
+    res.json("Hi NodeJs 123!");
 });
 
 const login = require('./routes/login');
