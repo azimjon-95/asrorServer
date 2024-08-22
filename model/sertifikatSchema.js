@@ -1,14 +1,15 @@
-const { Schema, model } = require('mongoose')
+const { Schema, model } = require('mongoose');
 
 const sertificatSchema = new Schema({
-    fname: { type: String, require: true },
-    lname: { type: String, require: true },
-    date: { type: Date, require: true },
-    markazNomi: { type: String, require: true },
-    fanNomi: { type: String, require: true },
-    userId: { type: Number, require: true },
+    fname: { type: String, required: true },
+    lname: { type: String, required: true },
+    date: { type: Date, required: true },
+    markazNomi: { type: String, required: true },
+    fanNomi: { type: String, required: true },
+    userId: { type: Number, required: true },
+}, {
+    timestamps: true // Automatically adds createdAt and updatedAt fields
+});
 
-})
-
-const Sertificat = model('sertificat', sertificatSchema);
+const Sertificat = model('Sertificat', sertificatSchema);
 module.exports = Sertificat;
